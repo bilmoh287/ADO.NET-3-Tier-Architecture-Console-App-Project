@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContactsBusinessLayer\ContactsBusinessLayer.csproj">
+      <Project>{2adf3bc8-2308-4f7c-8971-53e2efe94ef1}</Project>
+      <Name>ContactsBusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
