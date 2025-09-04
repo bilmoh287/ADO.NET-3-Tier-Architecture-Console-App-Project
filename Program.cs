@@ -28,6 +28,20 @@ namespace ContactsConsoleAppPresentationLayer
                 Console.WriteLine("Contact Not Found:-(");
             }
         }
+
+        public static void testAddNewContact()
+        {
+            clsContact Contact1 = new clsContact();
+
+            Contact1.FirstName = "Bilal";
+            Contact1.LastName = "Mohammed";
+            Contact1.Email = "bilmoh@gmail";
+            Contact1.Phone  = "0902220108";
+            Contact1.Address = "123 A.A";
+            Contact1.DateOfBirth = new DateTime(2003, 03, 05, 10, 20, 0);
+            Contact1.CountryID = 1;
+            Contact1.ImagePath = "";
+        }
         static void Main(string[] args)
         {
             testFindContactByID(1);
