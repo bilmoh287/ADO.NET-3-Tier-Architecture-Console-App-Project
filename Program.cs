@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using ContactsBusinessLayer;
 
 namespace ContactsConsoleAppPresentationLayer
 {
@@ -10,6 +8,7 @@ namespace ContactsConsoleAppPresentationLayer
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
