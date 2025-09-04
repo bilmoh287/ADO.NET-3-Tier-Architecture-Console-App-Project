@@ -30,7 +30,8 @@ namespace ContactsConsoleAppPresentationLayer
         }
         static void Main(string[] args)
         {
-            testFindContactByID(2);
+            testFindContactByID(1);
+            Console.ReadKey();
         }
     }
 }
