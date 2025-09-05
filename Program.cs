@@ -154,6 +154,22 @@ namespace ContactsConsoleAppPresentationLayer
             }
         }
 
+        static void testFindCountry(string CountryName)
+        {
+            //cannot create empity object if 
+            clsCountries Country = clsCountries.FindCountryByName(CountryName);
+            if (Country != null)
+            {
+                Console.WriteLine("Country Found:-)");
+                Console.WriteLine(Country.ID);
+                Console.WriteLine(Country.CountryName);
+            }
+            else
+            {
+                Console.WriteLine("Country Not Found:-(");
+            }
+        }
+
         static void Main(string[] args)
         {
             //testFindContactByID(1);
@@ -163,7 +179,8 @@ namespace ContactsConsoleAppPresentationLayer
             //testListContacts();
             //IsContactExists(8);
 
-            testFindCountry(6);
+            testFindCountry("Germanyi");
+            testFindCountry(2);
 
             Console.ReadKey();
         }
