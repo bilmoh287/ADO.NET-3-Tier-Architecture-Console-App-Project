@@ -103,11 +103,32 @@ namespace ContactsConsoleAppPresentationLayer
             DataTable dataTable = clsContact.GetAllContact();
             Console.WriteLine("Contact Data:-");
 
-            foreach (DataRow row in dataTable.Rows)
-            {
-                Console.WriteLine($"{row["ContactID"]},  {row["FirstName"]} {row["LastName"]}");
-            }
+            //foreach (DataRow row in dataTable.Rows)
+            //{
+            //    Console.WriteLine($"{row["ContactID"]},  {row["FirstName"]} {row["LastName"]}");
+            //}
 
+            foreach (DataRow Row in dataTable.Rows)
+            {
+                string contactID = Row["ContactID"].ToString().PadRight(5);   // عرض 5 خانات
+                string firstName = Row["FirstName"].ToString().PadRight(15);  // عرض 15 خانة
+                string lastName = Row["LastName"].ToString().PadRight(15);   // عرض 15 خانة
+                string email = Row["Email"].ToString().PadRight(25);      // عرض 25 خانة
+
+                Console.WriteLine($"{contactID}{firstName}{lastName}{email}");
+            }
+        }
+
+        static void IsContactExists(int ID)
+        {
+            if(clsContact.IsContactExist(ID))
+            {
+                Console.WriteLine("Yes, Contact with ID = " + ID + " is there.");
+            }
+            else
+            {
+                Console.WriteLine("Countact Not Found");
+            }
         }
         static void Main(string[] args)
         {
@@ -115,7 +136,9 @@ namespace ContactsConsoleAppPresentationLayer
             //testAddNewContact();
             //testUpdateContact(8);
             //testDeleteContact(7);
-            testListContacts();
+            //testListContacts();
+            IsContactExists(10);
+
             Console.ReadKey();
         }
     }
