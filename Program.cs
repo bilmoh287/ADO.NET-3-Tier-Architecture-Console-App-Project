@@ -137,14 +137,33 @@ namespace ContactsConsoleAppPresentationLayer
                 Console.WriteLine("Countact Not Found");
             }
         }
+
+        static void testFindCountry(int ID)
+        {
+            //cannot create empity object if 
+            clsCountries Country = clsCountries.FindCountryByID(ID);
+            if(Country != null)
+            {
+                Console.WriteLine("Country Found:-)");
+                Console.WriteLine(Country.ID);
+                Console.WriteLine(Country.CountryName);
+            }
+            else
+            {
+                Console.WriteLine("Country Not Found:-(");
+            }
+        }
+
         static void Main(string[] args)
         {
             //testFindContactByID(1);
             //testAddNewContact();
             //testUpdateContact(8);
-            testDeleteContact(55);
+            //testDeleteContact(55);
             //testListContacts();
-            IsContactExists(8);
+            //IsContactExists(8);
+
+            testFindCountry(6);
 
             Console.ReadKey();
         }
