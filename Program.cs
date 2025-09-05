@@ -102,7 +102,7 @@ namespace ContactsConsoleAppPresentationLayer
             //testFindContactByID(1);
             //testAddNewContact();
             //testUpdateContact(8);
-            testDeleteContact(19);
+            testDeleteContact(7);
             Console.ReadKey();
         }
     }
