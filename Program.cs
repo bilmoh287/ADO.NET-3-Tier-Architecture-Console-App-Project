@@ -78,7 +78,7 @@ namespace ContactsConsoleAppPresentationLayer
         static void Main(string[] args)
         {
             //testFindContactByID(1);
-            testAddNewContact();
+            //testAddNewContact();
             testUpdateContact(4);
             Console.ReadKey();
         }
