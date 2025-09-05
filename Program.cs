@@ -39,12 +39,47 @@ namespace ContactsConsoleAppPresentationLayer
             Contact1.Phone  = "0902220108";
             Contact1.Address = "123 A.A";
             Contact1.DateOfBirth = new DateTime(2003, 03, 05, 10, 20, 0);
-            Contact1.CountryID = 1;
+            Contact1.CountryID = 5;
             Contact1.ImagePath = "";
+
+            if(Contact1.Save())
+            {
+                Console.WriteLine("Contact Added Successfully:-)");
+            }
+            else
+            {
+                Console.WriteLine("Faild to Add new Contact:-(");
+            }
+        }
+
+        public static void testUpdateContact(int ID)
+        {
+            clsContact Contact1 = new clsContact();
+
+            Contact1.ID = ID;
+            Contact1.FirstName = "Jemila";
+            Contact1.LastName = "Abdellah";
+            Contact1.Email = "Jem@gmail";
+            Contact1.Phone = "0904440108";
+            Contact1.Address = "123 Jimma";
+            Contact1.DateOfBirth = new DateTime(2003, 01, 17, 10, 30, 0);
+            Contact1.CountryID = 5;
+            Contact1.ImagePath = "";
+
+            if (Contact1.Save())
+            {
+                Console.WriteLine("Contact Updated Successfully:-)");
+            }
+            else
+            {
+                Console.WriteLine("Faild to Update Contact:-(");
+            }
         }
         static void Main(string[] args)
         {
-            testFindContactByID(1);
+            //testFindContactByID(1);
+            testAddNewContact();
+            testUpdateContact(4);
             Console.ReadKey();
         }
     }
