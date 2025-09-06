@@ -147,6 +147,8 @@ namespace ContactsConsoleAppPresentationLayer
                 Console.WriteLine("Country Found:-)");
                 Console.WriteLine(Country.ID);
                 Console.WriteLine(Country.CountryName);
+                Console.WriteLine(Country.Code);
+                Console.WriteLine(Country.PhoneCode);
             }
             else
             {
@@ -163,6 +165,8 @@ namespace ContactsConsoleAppPresentationLayer
                 Console.WriteLine("Country Found:-)");
                 Console.WriteLine(Country.ID);
                 Console.WriteLine(Country.CountryName);
+                Console.WriteLine(Country.Code);
+                Console.WriteLine(Country.PhoneCode);
             }
             else
             {
@@ -280,13 +284,13 @@ namespace ContactsConsoleAppPresentationLayer
             //testListContacts();
             //IsContactExists(8);
 
-            testFindCountry("Turkey");
+            testFindCountry("Ethiopia");
             testFindCountry(2);
             //testAddNewCountry();
             //testUpdateCountry(7);
             //testIsCountryExist("Ethiopia");
             //testDeleteCountry(7);
-            testListCountries();
+            //testListCountries();
 
             Console.ReadKey();
         }
