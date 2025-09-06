@@ -176,9 +176,9 @@ namespace ContactsConsoleAppPresentationLayer
 
         static void testAddNewCountry()
         {
-            string CountryName = "Turkey";
-            string Code = "TR";
-            string PhoneCode = "+90";
+            string CountryName = "Saudi Aarabia";
+            string Code = "SA";
+            string PhoneCode = "+966";
 
             clsCountries Country1 = new clsCountries();
 
@@ -198,9 +198,9 @@ namespace ContactsConsoleAppPresentationLayer
 
         static void testUpdateCountry(int ID)
         {
-            string CountryName = "Egypt";
-            string Code = "EG";
-            string PhoneCode = "+20";
+            string CountryName = "Saudi Arabia";
+            string Code = "SA";
+            string PhoneCode = "+966"; 
 
             clsCountries Country1 = clsCountries.FindCountry(ID);
 
@@ -280,7 +280,7 @@ namespace ContactsConsoleAppPresentationLayer
             foreach (DataRow Row in dataTable.Rows)
             {
                 string CountryID = Row["CountryID"].ToString().PadRight(5);   // عرض 5 خانات
-                string CountryName = Row["CountryName"].ToString().PadRight(15);  // عرض 15 خانة
+                string CountryName = Row["CountryName"].ToString().PadRight(17);  // عرض 15 خانة
                 string Code = Row["Code"].ToString().PadRight(15);  // عرض 15 خانة
                 string PhoneCOde = Row["PhoneCode"].ToString().PadRight(15);  // عرض 15 خانة
 
@@ -300,7 +300,7 @@ namespace ContactsConsoleAppPresentationLayer
             //testFindCountry("Ethiopia");
             //testFindCountry(7);
             //testAddNewCountry();
-            //testUpdateCountry(7);
+            testUpdateCountry(9);
             //testIsCountryExist(7);
             //testDeleteCountry(4);
             testListCountries();
