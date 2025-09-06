@@ -281,8 +281,10 @@ namespace ContactsConsoleAppPresentationLayer
             {
                 string CountryID = Row["CountryID"].ToString().PadRight(5);   // عرض 5 خانات
                 string CountryName = Row["CountryName"].ToString().PadRight(15);  // عرض 15 خانة
+                string Code = Row["Code"].ToString().PadRight(15);  // عرض 15 خانة
+                string PhoneCOde = Row["PhoneCode"].ToString().PadRight(15);  // عرض 15 خانة
 
-                Console.WriteLine($"{CountryID}{CountryName}");
+                Console.WriteLine($"{CountryID}{CountryName}{Code}{PhoneCOde}");
             }
         }
 
@@ -299,10 +301,9 @@ namespace ContactsConsoleAppPresentationLayer
             //testFindCountry(7);
             //testAddNewCountry();
             //testUpdateCountry(7);
-            testIsCountryExist(4);
-            testDeleteCountry(4);
-            testIsCountryExist(4);
-            //testListCountries();
+            //testIsCountryExist(7);
+            //testDeleteCountry(4);
+            testListCountries();
 
             Console.ReadKey();
         }
