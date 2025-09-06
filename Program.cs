@@ -233,6 +233,25 @@ namespace ContactsConsoleAppPresentationLayer
             }
         }
 
+        static void testDeleteCountry(int ID)
+        {
+            if(clsCountries.IsCountryExists(ID))
+            {
+                if(clsCountries.DeleteCountry(ID))
+                {
+                    Console.WriteLine("Country Deleted Successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Country Deletion Faield!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Country with ID = " + ID + " is Not there.");
+            }
+        }
+
         static void Main(string[] args)
         {
             //testFindContactByID(1);
@@ -246,7 +265,8 @@ namespace ContactsConsoleAppPresentationLayer
             //testFindCountry(2);
             //testAddNewCountry();
             //testUpdateCountry(7);
-            testIsCountryExist("Ethiopia");
+            //testIsCountryExist("Ethiopia");
+            testDeleteCountry(7);
 
             Console.ReadKey();
         }
