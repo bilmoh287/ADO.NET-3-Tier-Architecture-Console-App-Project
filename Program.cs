@@ -207,7 +207,18 @@ namespace ContactsConsoleAppPresentationLayer
                 }
             }
 
+        }
 
+        static void testIsCountryExist(int ID)
+        {
+            if(clsCountries.IsCountryExists(ID))
+            {
+                Console.WriteLine("Yes, Country is there");
+            }
+            else
+            {
+                Console.WriteLine("Country with ID = " + ID + " is Not there.");
+            }
         }
 
         static void Main(string[] args)
@@ -222,7 +233,8 @@ namespace ContactsConsoleAppPresentationLayer
             //testFindCountry("Ethiopia");
             //testFindCountry(2);
             //testAddNewCountry();
-            testUpdateCountry(7);
+            //testUpdateCountry(7);
+            testIsCountryExist(8);
 
             Console.ReadKey();
         }
