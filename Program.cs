@@ -176,9 +176,9 @@ namespace ContactsConsoleAppPresentationLayer
 
         static void testAddNewCountry()
         {
-            string CountryName = "Brazil";
-            string Code = "BR";
-            string PhoneCode = "+55";
+            string CountryName = "Turkey";
+            string Code = "TR";
+            string PhoneCode = "+90";
 
             clsCountries Country1 = new clsCountries();
 
@@ -198,13 +198,17 @@ namespace ContactsConsoleAppPresentationLayer
 
         static void testUpdateCountry(int ID)
         {
-            string CountryName = "Turkey";
+            string CountryName = "Egypt";
+            string Code = "EG";
+            string PhoneCode = "+20";
 
             clsCountries Country1 = clsCountries.FindCountry(ID);
 
             if (Country1 != null)
             {
                 Country1.CountryName = CountryName;
+                Country1.Code = Code;
+                Country1.PhoneCode = PhoneCode;
                 if (Country1.Save())
                 {
                     Console.WriteLine("Country Updated Successfuly:-)");
@@ -214,7 +218,10 @@ namespace ContactsConsoleAppPresentationLayer
                     Console.WriteLine("Failed to Update Contact:-(");
                 }
             }
-
+            else
+            {
+                Console.WriteLine("Failed to Update Contact:-(");
+            }
         }
 
         static void testIsCountryExist(int ID)
@@ -290,9 +297,9 @@ namespace ContactsConsoleAppPresentationLayer
 
             //testFindCountry("Ethiopia");
             //testFindCountry(7);
-            testAddNewCountry();
+            //testAddNewCountry();
             //testUpdateCountry(7);
-            //testIsCountryExist("Ethiopia");
+            testIsCountryExist(8);
             //testDeleteCountry(7);
             //testListCountries();
 
