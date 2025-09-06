@@ -177,12 +177,16 @@ namespace ContactsConsoleAppPresentationLayer
         static void testAddNewCountry()
         {
             string CountryName = "Brazil";
+            string Code = "BR";
+            string PhoneCode = "+55";
 
             clsCountries Country1 = new clsCountries();
 
             Country1.CountryName = CountryName;
+            Country1.Code = Code;
+            Country1.PhoneCode = PhoneCode;
 
-            if(Country1.Save())
+            if (Country1.Save())
             {
                 Console.WriteLine("Country Added Successfuly:-)");
             }
@@ -284,9 +288,9 @@ namespace ContactsConsoleAppPresentationLayer
             //testListContacts();
             //IsContactExists(8);
 
-            testFindCountry("Ethiopia");
-            testFindCountry(2);
-            //testAddNewCountry();
+            //testFindCountry("Ethiopia");
+            //testFindCountry(7);
+            testAddNewCountry();
             //testUpdateCountry(7);
             //testIsCountryExist("Ethiopia");
             //testDeleteCountry(7);
