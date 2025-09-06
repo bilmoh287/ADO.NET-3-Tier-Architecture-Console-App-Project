@@ -141,7 +141,7 @@ namespace ContactsConsoleAppPresentationLayer
         static void testFindCountry(int ID)
         {
             //cannot create empity object if 
-            clsCountries Country = clsCountries.FindCountryByID(ID);
+            clsCountries Country = clsCountries.FindCountry(ID);
             if(Country != null)
             {
                 Console.WriteLine("Country Found:-)");
@@ -157,7 +157,7 @@ namespace ContactsConsoleAppPresentationLayer
         static void testFindCountry(string CountryName)
         {
             //cannot create empity object if 
-            clsCountries Country = clsCountries.FindCountryByName(CountryName);
+            clsCountries Country = clsCountries.FindCountry(CountryName);
             if (Country != null)
             {
                 Console.WriteLine("Country Found:-)");
@@ -192,7 +192,7 @@ namespace ContactsConsoleAppPresentationLayer
         {
             string CountryName = "Turkey";
 
-            clsCountries Country1 = clsCountries.FindCountryByID(ID);
+            clsCountries Country1 = clsCountries.FindCountry(ID);
 
             if (Country1 != null)
             {
@@ -252,6 +252,25 @@ namespace ContactsConsoleAppPresentationLayer
             }
         }
 
+        static void testListCountries()
+        {
+            DataTable dataTable = clsCountries.GetAllCountries();
+            Console.WriteLine("Countries Data:-");
+
+            //foreach (DataRow row in dataTable.Rows)
+            //{
+            //    Console.WriteLine($"{row["ContactID"]},  {row["FirstName"]} {row["LastName"]}");
+            //}
+
+            foreach (DataRow Row in dataTable.Rows)
+            {
+                string CountryID = Row["CountryID"].ToString().PadRight(5);   // عرض 5 خانات
+                string CountryName = Row["CountryName"].ToString().PadRight(15);  // عرض 15 خانة
+
+                Console.WriteLine($"{CountryID}{CountryName}");
+            }
+        }
+
         static void Main(string[] args)
         {
             //testFindContactByID(1);
@@ -261,12 +280,13 @@ namespace ContactsConsoleAppPresentationLayer
             //testListContacts();
             //IsContactExists(8);
 
-            //testFindCountry("Ethiopia");
-            //testFindCountry(2);
+            testFindCountry("Ethiopia");
+            testFindCountry(2);
             //testAddNewCountry();
             //testUpdateCountry(7);
             //testIsCountryExist("Ethiopia");
-            testDeleteCountry(7);
+            //testDeleteCountry(7);
+            testListCountries();
 
             Console.ReadKey();
         }
