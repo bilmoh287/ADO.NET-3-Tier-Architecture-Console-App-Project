@@ -299,8 +299,9 @@ namespace ContactsConsoleAppPresentationLayer
             //testFindCountry(7);
             //testAddNewCountry();
             //testUpdateCountry(7);
-            testIsCountryExist(8);
-            //testDeleteCountry(7);
+            testIsCountryExist(4);
+            testDeleteCountry(4);
+            testIsCountryExist(4);
             //testListCountries();
 
             Console.ReadKey();
