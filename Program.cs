@@ -134,7 +134,7 @@ namespace ContactsConsoleAppPresentationLayer
             }
             else
             {
-                Console.WriteLine("Countact Not Found");
+                Console.WriteLine("Countact Not Found:-(");
             }
         }
 
@@ -170,6 +170,46 @@ namespace ContactsConsoleAppPresentationLayer
             }
         }
 
+        static void testAddNewCountry()
+        {
+            string CountryName = "Brazil";
+
+            clsCountries Country1 = new clsCountries();
+
+            Country1.CountryName = CountryName;
+
+            if(Country1.Save())
+            {
+                Console.WriteLine("Country Added Successfuly:-)");
+            }
+            else
+            {
+                Console.WriteLine("Failed to Add Contact:-(");
+            }
+        }
+
+        static void testUpdateCountry(int ID)
+        {
+            string CountryName = "Turkey";
+
+            clsCountries Country1 = clsCountries.FindCountryByID(ID);
+
+            if (Country1 != null)
+            {
+                Country1.CountryName = CountryName;
+                if (Country1.Save())
+                {
+                    Console.WriteLine("Country Updated Successfuly:-)");
+                }
+                else
+                {
+                    Console.WriteLine("Failed to Update Contact:-(");
+                }
+            }
+
+
+        }
+
         static void Main(string[] args)
         {
             //testFindContactByID(1);
@@ -179,8 +219,10 @@ namespace ContactsConsoleAppPresentationLayer
             //testListContacts();
             //IsContactExists(8);
 
-            testFindCountry("Germanyi");
-            testFindCountry(2);
+            //testFindCountry("Ethiopia");
+            //testFindCountry(2);
+            //testAddNewCountry();
+            testUpdateCountry(7);
 
             Console.ReadKey();
         }
