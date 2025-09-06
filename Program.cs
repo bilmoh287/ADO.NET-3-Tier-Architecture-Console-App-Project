@@ -280,7 +280,7 @@ namespace ContactsConsoleAppPresentationLayer
             //testListContacts();
             //IsContactExists(8);
 
-            testFindCountry("Ethiopia");
+            testFindCountry("Turkey");
             testFindCountry(2);
             //testAddNewCountry();
             //testUpdateCountry(7);
