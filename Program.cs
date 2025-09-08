@@ -300,7 +300,7 @@ namespace ContactsConsoleAppPresentationLayer
             //testFindCountry("Ethiopia");
             //testFindCountry(7);
             //testAddNewCountry();
-            testUpdateCountry(9);
+            //testUpdateCountry(9);
             //testIsCountryExist(7);
             //testDeleteCountry(4);
             testListCountries();
